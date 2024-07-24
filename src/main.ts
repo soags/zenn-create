@@ -1,11 +1,10 @@
 import { NewArticleArgs } from './types'
 import { Command } from 'commander'
 import { spawn } from 'cross-spawn'
-
-const {
+import {
   getSlugRemoteDuplicateMessage,
   getUnexpectedErrorMessage,
-} = require('./utils')
+} from './utils'
 
 const validateSlugRemote = async (slug: string) => {
   const res = await fetch(`https://zenn.dev/api/articles/${slug}`)
