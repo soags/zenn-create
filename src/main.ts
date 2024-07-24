@@ -6,7 +6,7 @@ import {
   getUnexpectedErrorMessage,
 } from './utils'
 
-const validateSlugRemote = async (slug: string) => {
+const validateSlugRemote = async (slug) => {
   const res = await fetch(`https://zenn.dev/api/articles/${slug}`)
   if (res.status === 200) {
     console.error(getSlugRemoteDuplicateMessage(slug))
@@ -28,7 +28,7 @@ const spawnNewArticle = (args: NewArticleArgs) => {
     published,
     publicationName,
     machineReadable,
-    help,,
+    help,
   } = args
 
   const child = spawn('npx', [
