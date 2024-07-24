@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { NewArticleArgs } from './types'
 import { Command } from 'commander'
 import { spawn } from 'cross-spawn'
