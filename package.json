@@ -1,22 +1,42 @@
 {
   "name": "zenn-slugged",
   "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/soags/zenn-slugged.git"
-  },
+  "description": "Unofficial zenn-cli wrapper for slug validation",
   "keywords": [
     "zenn"
   ],
-  "author": "soags",
+  "repository": "github:soags/zenn-slugged",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/soags/zenn-slugged/issues"
+  "author": "soags",
+  "main": "dist/main.js",
+  "bin": {
+    "zenns": "dist/main.js"
   },
-  "homepage": "https://github.com/soags/zenn-slugged#readme"
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/main.ts",
+    "start": "node dist/main.js",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "cross-spawn": "^7.0.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.7.0",
+    "@types/cross-spawn": "^6.0.6",
+    "@types/node": "^20.14.12",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.8.0",
+    "prettier": "^3.3.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^7.17.0",
+    "zenn-cli": "^0.1.154"
+  },
+  "peerDependencies": {
+    "zenn-cli": "^0.1.154"
+  }
 }
