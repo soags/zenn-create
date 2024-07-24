@@ -1,6 +1,6 @@
 {
   "name": "zenn-slugged",
-  "version": "0.1.0",
+  "version": "0.1.6",
   "description": "Unofficial zenn-cli wrapper for slug validation",
   "keywords": [
     "zenn"
