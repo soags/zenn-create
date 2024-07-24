@@ -6,7 +6,7 @@ import {
   getUnexpectedErrorMessage,
 } from './utils'
 
-const validateSlugRemote = async (slug) => {
+const validateSlugRemote = async (slug: string) => {
   const res = await fetch(`https://zenn.dev/api/articles/${slug}`)
   if (res.status === 200) {
     console.error(getSlugRemoteDuplicateMessage(slug))
