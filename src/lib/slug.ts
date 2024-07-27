@@ -8,18 +8,26 @@ export async function generateArticleSlug(slug: string | undefined): Promise<str
     return generateRandomSlug()
   }
 
-  // slugフォーマットチェック
-  if (!validateSlugFormat(slug)) {
-    log.error(article.message.slugFormatError(slug))
-    process.exit(1)
-  }
-
   if (slug.includes('*')) {
-    // slugに*が含まれている場合、最初の*をランダム値を挿入
+    // slugに*が含まれている場合、最初の*をランダム値に置換、他は削除
     const randomSlug = generateRandomSlug()
-    return slug.replace('*', randomSlug).replace(/\*/g, '').slice(0, 50)
+    const generatedSlug = slug.replace('*', randomSlug).replace(/\*/g, '').slice(0, 50)
+
+    // 挿入後にslugフォーマットチェック
+    if (!validateSlugFormat(generatedSlug)) {
+      log.error(article.message.slugFormatError(generatedSlug))
+      process.exit(1)
+    }
+
+    return generatedSlug
   } else {
-    // slugに*が含まれていない場合、指定された値を使用し重複時はエラーとする
+    // slugフォーマットチェック
+    if (!validateSlugFormat(slug)) {
+      log.error(article.message.slugFormatError(slug))
+      process.exit(1)
+    }
+
+    // 指定されたslugを使用し重複時はエラーとする
     if (!(await validateSlugConflict(slug))) {
       log.error(article.message.slugConflictError(slug))
       process.exit(1)
