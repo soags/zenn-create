@@ -13,11 +13,11 @@
     "zenn-create": "dist/main.js"
   },
   "scripts": {
-    "build": "tsc",
     "dev": "ts-node src/main.ts",
-    "format": "prettier --write .",
+    "start": "node dist/main.js",
+    "build": "tsc -p .",
     "lint": "eslint .",
-    "start": "node dist/main.js"
+    "format": "prettier --write ."
   },
   "dependencies": {
     "chalk": "^4.1.2",

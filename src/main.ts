@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { Command } from '@commander-js/extra-typings'
 import { version } from '../package.json'
 import { newArticleCommand } from './commands/article'
