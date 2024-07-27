@@ -1,4 +1,4 @@
-# Zenn Slugged
+# Zenn Create
 
 [Zenn CLI](https://zenn.dev/zenn/articles/install-zenn-cli) の`new:article`、`new:book`の動作を改良する非公式のCLIツール。
 
@@ -16,33 +16,33 @@
 ## インストール
 
 ```shell
-npm install zenn-slugged zenn-cli
+npm install zenn-create zenn-cli
 ```
 
 ## 使用方法
 
 ```shell
-$ zenn-slugged article
+$ zenn-create article
 created: articles/d3786564c79ebd.md
 ```
 
 ```shell
-$ zenn-slugged --slug this-is-enable-slug
+$ zenn-create article --slug this-is-enable-slug
 created: articles/this-is-enable-slug.md
 ```
 
 ```shell
-$ zenn-slugged --slug what
+$ zenn-create article --slug what
 error: slugの値（what）が不正です。小文字の半角英数字（a-z0-9）、ハイフン（-）、アンダースコア（_）の12〜50字の組み合わせにしてください
 ```
 
 ```shell
-$ zenn-slugged --slug what-is-slug
+$ zenn-create article --slug what-is-slug
 error: slugの値（what-is-slug）が不正です。このslugは既に使われています。
 ```
 
 ```shell
-$ zenn-slugged --slug what-is-slug-*
+$ zenn-create article --slug what-is-slug-*
 created: articles/what-is-slug-9d9c0da1a6a482.md
 ```
 
