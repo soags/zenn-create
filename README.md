@@ -16,7 +16,7 @@
 ## インストール
 
 ```shell
-npm install zenn-create zenn-cli
+npm install zenn-create
 ```
 
 ## 使用方法

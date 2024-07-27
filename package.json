@@ -1,6 +1,6 @@
 {
   "name": "zenn-create",
-  "version": "0.1.7",
+  "version": "1.0.0",
   "description": "Unofficial zenn-cli wrapper for slug validation",
   "keywords": [
     "zenn"
