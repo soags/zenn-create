@@ -1,6 +1,6 @@
 {
   "name": "zenn-create",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Unofficial zenn-cli wrapper for slug validation",
   "keywords": [
     "zenn"
@@ -20,13 +20,13 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@commander-js/extra-typings": "^12.1.0",
     "chalk": "^4.1.2",
     "commander": "^12.1.0",
     "crypto": "^1.0.1",
     "fs-extra": "^11.2.0"
   },
   "devDependencies": {
-    "@commander-js/extra-typings": "^12.1.0",
     "@eslint/js": "^9.7.0",
     "@tsconfig/node20": "^20.1.4",
     "@types/cross-spawn": "^6.0.6",
